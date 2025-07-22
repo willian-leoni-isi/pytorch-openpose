@@ -170,7 +170,6 @@ def draw_handpose(canvas, all_hand_peaks, show_number=False):
                 ax.text(x, y, str(i))
     bg.draw()
 
-    # --- INÍCIO DO CÓDIGO CORRIGIDO E INDENTADO ---
     buf = bg.tostring_argb()
     ncols, nrows = bg.get_width_height()
     argb_array = np.frombuffer(buf, dtype=np.uint8).reshape(nrows, ncols, 4)
@@ -179,7 +178,6 @@ def draw_handpose(canvas, all_hand_peaks, show_number=False):
     canvas_bgr = argb_array[:, :, 1:4][:, :, ::-1]
 
     return canvas_bgr
-    # --- FIM DO CÓDIGO CORRIGIDO E INDENTADO ---
 
 
 # image drawed by opencv is not good.
